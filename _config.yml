@@ -1,15 +1,14 @@
 title: Lyrapaxara
 tagline: A website for JGCorreia - Author
 description: >-
-  Welcome to my personal site (in preparation).
-
-avatar:/assets/img/avatar.jpg
+  Welcome to my personal site (in preparation)
+avatar: /assets/img/avatar.jpg
 
 theme_mode: dark
 skin: berry
 
 header:
-  image:/assets/img/cover.jpg   # optional
+  image: /assets/img/cover.jpg   # optional
 
 social:
   name: Lyrapaxara
