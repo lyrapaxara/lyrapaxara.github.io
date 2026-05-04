@@ -1,5 +1,5 @@
 title: Lyrapaxara
-tagline: A website for JGCorreia - Author
+tagline: A website for JG Correia - Author
 description: >-
   Welcome to my personal site (in preparation)
 avatar: /assets/img/avatar.jpg
@@ -8,7 +8,7 @@ theme_mode: dark
 skin: berry
 
 header:
-  image: /assets/img/cover.jpg   # optional
+  image: # optional
 
 social:
   name: Lyrapaxara
@@ -33,7 +33,7 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone:
+timezone: Atlantic/Madeira
 
 # The base URL of your site
 baseurl: ""
