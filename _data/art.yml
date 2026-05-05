@@ -1,0 +1,17 @@
+# Each entry shows up as one tile in the gallery.
+# Required: title, image
+# Optional: thumb (a smaller version for faster loading on the grid)
+#
+# Image paths are relative to the site root.
+# Put your images in /assets/img/art/ and (optionally) /assets/img/art/thumbs/
+
+- title: Exemplo — Obra 1
+  image: /assets/img/art/piece-1.jpg
+  # thumb: /assets/img/art/thumbs/piece-1.jpg
+
+- title: Exemplo — Obra 2
+  image: /assets/img/art/piece-2.jpg
+  # thumb: /assets/img/art/thumbs/piece-2.jpg
+
+- title: Exemplo — Obra 3
+  image: /assets/img/art/piece-3.jpg

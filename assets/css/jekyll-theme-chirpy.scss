@@ -53,3 +53,79 @@
   .home-hero { height: 220px; }
   .home-hero-inner h1 { font-size: 1.8rem; }
 }
+/* Writings list */
+.writings-list { list-style: none; padding: 0; }
+.writings-list li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--main-border-color);
+}
+.writings-list .post-date {
+  color: var(--text-muted-color);
+  font-size: 0.9em;
+}
+
+/* Art gallery grid */
+.art-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.art-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: var(--card-bg);
+}
+.art-tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.art-tile:hover img { transform: scale(1.05); }
+.art-tile-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: #fff;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.art-tile:hover .art-tile-caption { opacity: 1; }
+
+/* Lightbox */
+#art-lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+#art-lightbox[hidden] { display: none; }
+#art-lightbox-img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+#art-lightbox-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none; border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+#art-lightbox-caption {
+  position: absolute;
+  bottom: 1rem; left: 0; right: 0;
+  text-align: center;
+  color: #fff;
+}
