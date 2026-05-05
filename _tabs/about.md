@@ -1,13 +1,11 @@
----
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
----
+# João Gabriel Correia
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
-Hello
+Nasceu em 1952, em Santana, Ilha da Madeira.
 
-This is my personal webpage (in preparation)
+Foi aluno do Seminário do Funchal. Saiu da Madeira em 1970 e em 1971 radicou-se na Bélgica.
 
-JG Correia
+Frequentou a Universidade Católica Portuguesa em 1970-1971 (estudo de Filosofia e Teologia) e doutorou-se em Psicologia na Universidade Católica de Lovaina onde foi docente durante oito anos.
+
+Ao lado da psicologia e ciências afins, os seus interesses vão da literatura, à filosofia, à antropologia, ao estudo comparado das culturas e religiões, e desde há pouco, à inteligência artificial ! Em busca contínua de novos horizontes do conhecimento, o autor define-se sobretudo como um contador de histórias para jovens de todas as idades…
+
+
