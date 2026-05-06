@@ -1,17 +1,26 @@
-# Each entry shows up as one tile in the gallery.
-# Required: title, image
-# Optional: thumb (a smaller version for faster loading on the grid)
+# Each top-level entry is one tile in the gallery.
+# An entry is either a SINGLE PIECE or a SERIES.
 #
-# Image paths are relative to the site root.
-# Put your images in /assets/img/art/ and (optionally) /assets/img/art/thumbs/
+# SINGLE PIECE — one image per tile.
+# SERIES — one cover tile, click reveals a sub-grid.
+#
+# Optional fields on any entry: year, medium, description, thumb.
+# Image paths are relative to site root.
 
-- title: Exemplo — Obra 1
-  image: /assets/img/art/piece-1.jpg
-  # thumb: /assets/img/art/thumbs/piece-1.jpg
-
-- title: Exemplo — Obra 2
-  image: /assets/img/art/piece-2.jpg
-  # thumb: /assets/img/art/thumbs/piece-2.jpg
-
-- title: Exemplo — Obra 3
-  image: /assets/img/art/piece-3.jpg
+# ===== Series with simple paths =====
+# Sub-pieces are just file paths. They share the series title in the lightbox.
+- title: Percurso biográfico
+  cover: /assets/img/art/identcover.jpg
+  thumb: /assets/img/art/thumbs/identcover.jpg
+  year: 2026
+  medium: aguarela - pintura óleo
+  description: >
+    Seis perspetivas de uma vida...
+  images:
+    - /assets/img/art/ident1.jpg
+    - /assets/img/art/ident2.jpg
+    - /assets/img/art/ident3.jpg
+    - /assets/img/art/ident4.jpg
+    - /assets/img/art/ident5.jpg
+    - /assets/img/art/ident6.jpg
+    
