@@ -1,0 +1,35 @@
+{%- comment -%}
+  Language switcher for multilingual posts.
+  Shows up only on posts that have a `ref:` field in front matter.
+  Finds all posts sharing the same `ref` and displays them as a row of language links.
+{%- endcomment -%}
+
+{%- if page.ref -%}
+  {%- assign translations = site.posts | where: "ref", page.ref -%}
+  {%- if translations.size > 1 -%}
+
+  {%- assign lang_names = "pt:Português,fr:Français,en:English" | split: "," -%}
+
+  <div class="lang-switcher">
+    <span class="lang-switcher-label">🌐</span>
+    {%- for t in translations -%}
+      {%- assign current_lang = t.lang | default: "pt" -%}
+      {%- assign label = current_lang -%}
+      {%- for pair in lang_names -%}
+        {%- assign parts = pair | split: ":" -%}
+        {%- if parts[0] == current_lang -%}{%- assign label = parts[1] -%}{%- endif -%}
+      {%- endfor -%}
+
+      {%- if t.url == page.url -%}
+        <span class="lang-switcher-current">{{ label }}</span>
+      {%- else -%}
+        <a class="lang-switcher-link"
+           href="{{ t.url | relative_url }}"
+           hreflang="{{ current_lang }}"
+           lang="{{ current_lang }}">{{ label }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- endif -%}
+{%- endif -%}
