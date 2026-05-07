@@ -1,11 +1,11 @@
-title: Lyrapaxara
-tagline: A website for JG Correia - Author
+title: lyrapaxara
+tagline: Words are universes !
 description: >-
-  Welcome to my personal site (in preparation)
+  This is the João Gabriel Correia website.
 avatar: /assets/img/avatar.jpg
 
 # theme_mode: dark
-skin: berry
+# skin: berry
 
 header:
   image: # optional

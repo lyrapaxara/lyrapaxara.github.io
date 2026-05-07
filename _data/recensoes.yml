@@ -1,0 +1,42 @@
+# Recensões, críticas, notícias e referências sobre «Flores de Jasmim».
+#
+# Cada entrada gera uma linha na secção "Recensões e referências".
+# Tipos suportados (afecta apenas a etiqueta colorida):
+#   critica, noticia, entrevista, mencao
+#
+# Campos:
+#   title         → título da peça
+#   author        → opcional, nome do autor da peça
+#   source        → opcional, jornal/site/local
+#   date          → YYYY-MM-DD da publicação original (usado para ordenar)
+#   url           → o link principal — pode ser interno (/posts/slug/) ou externo (https://...)
+#   original_url  → opcional, link para a fonte externa quando o `url` aponta para uma versão interna
+
+- type: critica
+  title: «Flores de Jasmim» — apresentação na Livraria Orfeu
+  author: Dr. Joaquim Silva Rodrigues
+  source: Livraria Orfeu, Bruxelas
+  date: 2011-05-17
+  url: /posts/flores-de-jasmim-apresentacao-bruxelas/
+
+- type: critica
+  title: Manhã Submersa e Flores de Jasmim
+  author: Joaquim Tenreira Martins
+  source: Capeia Arraiana
+  date: 2012-01-15
+  url: /posts/flores-de-jasmim-no-espelho-de-manha-submersa/
+  original_url: https://capeiaarraiana.pt/2012/01/15/manha-submersa-e-flores-de-jasmim/
+
+- type: noticia
+  title: João Gabriel Correia lança romance
+  author: João Filipe Pestana
+  source: Diário de Notícias da Madeira
+  date: 2011-05-08
+  url: /posts/flores-de-jasmim-no-diario-de-noticias/
+
+- type: mencao
+  title: Ficha do autor e do romance
+  source: Portal da Literatura
+  date: 2011-01-01
+  url: /posts/flores-de-jasmim-no-portal-da-literatura/
+  original_url: https://www.portaldaliteratura.com/autores.php?autor=1125
