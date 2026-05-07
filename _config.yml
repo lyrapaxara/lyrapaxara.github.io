@@ -4,7 +4,7 @@ description: >-
   Welcome to my personal site (in preparation)
 avatar: /assets/img/avatar.jpg
 
-theme_mode: dark
+# theme_mode: dark
 skin: berry
 
 header:
