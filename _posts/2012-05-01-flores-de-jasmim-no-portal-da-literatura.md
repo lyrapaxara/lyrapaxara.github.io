@@ -13,7 +13,7 @@ O autor e o romance *Flores de Jasmim* estão registados no [**Portal da Literat
 
 A entrada apresenta uma nota biográfica condensada:
 
-> Santana, Madeira, 1952. Seminário do Funchal. Bélgica desde 1971. Universidade Católica Portuguesa em Filosofia e Teologia; doutoramento em Psicologia na Universidade Católica de Lovaina, onde foi docente durante oito anos.
+> Santana, Madeira, 1952. Seminário do Funchal. Bélgica desde 1971. Frequência da Universidade Católica Portuguesa em Filosofia e Teologia; doutoramento em Psicologia na Universidade Católica de Lovaina, onde foi docente durante oito anos.
 
 Para além da formação académica, a ficha sublinha o cruzamento de interesses que enformam a escrita: literatura, filosofia, antropologia e o estudo comparado das culturas e religiões. O autor define-se a si próprio, na nota final, como *contador de histórias para jovens de todas as idades*.
 

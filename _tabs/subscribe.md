@@ -1,6 +1,6 @@
 ---
 icon: fas fa-envelope-open-text
-order: 5
+order: 10
 description: Inscreve-te na newsletter Lyrapaxara.
 ---
 

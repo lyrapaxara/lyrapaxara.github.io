@@ -1,12 +1,12 @@
 ---
 icon: fas fa-link
-order: 4
+order: 7
 description: Páginas e recursos recomendados.
 ---
 
 # Ligações
 
-Páginas e recursos que vale a pena visitar.
+Páginas e recursos que vale a pena visitar. (Em construção)
 
 ## Literatura e escrita
 
