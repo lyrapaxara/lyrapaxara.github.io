@@ -58,4 +58,4 @@ Le travail est mis à disposition gratuitement, dans deux formats :
 
 ---
 
-*Pour toute question relative à ce travail, [écrire ici](/about/).*
+*Pour toute question, [écrire ici](mailto:contact@lyrapaxara.eu)*

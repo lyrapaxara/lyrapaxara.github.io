@@ -29,7 +29,7 @@ O livro pode ser encomendado em linha directamente no catálogo Orfeu:
 
 > 📖 [**Encomendar «Flores de Jasmim» na Livraria Orfeu**](https://www.livrariaorfeu.com/edicoes-orfeu){:target="_blank"}
 
-Para questões directas — encomendas internacionais, dedicatórias, ou qualquer outro contacto sobre o livro —, [escreve-me](/about/).
+Para questões directas —  dedicatórias, ou qualquer outro contacto sobre o livro —, [escreve-me](mailto:contact@lyrapaxara.eu).
 
 ## Recensões e referências
 
