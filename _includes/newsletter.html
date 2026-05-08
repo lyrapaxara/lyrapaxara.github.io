@@ -1,27 +1,20 @@
 {%- comment -%}
   Newsletter signup form — uses Buttondown.
   Replace YOUR-USERNAME with your Buttondown newsletter username.
-  Drop the include anywhere with: {% include newsletter.html %}
 {%- endcomment -%}
 
 <div class="newsletter-box">
-  <h3 class="newsletter-title">📬 Recebe os novos textos</h3>
-  <p class="newsletter-blurb">
-    Inscreve-te para receber por email os novos escritos publicados.
-    Sem spam, podes cancelar a qualquer momento.
-  </p>
-
-  <form action="https://buttondown.com/api/emails/embed-subscribe/lyrapaxara"
+  <form action="https://buttondown.com/api/emails/embed-subscribe/YOUR-USERNAME"
         method="post"
         target="popupwindow"
-        onsubmit="window.open('https://buttondown.com/lyrapaxara', 'popupwindow')"
+        onsubmit="window.open('https://buttondown.com/YOUR-USERNAME', 'popupwindow')"
         class="newsletter-form">
-    <label for="bd-email" class="visually-hidden">Endereço de email</label>
+    <label for="bd-email" class="visually-hidden">Email</label>
     <input type="email"
            name="email"
            id="bd-email"
-           placeholder="o-teu-email@exemplo.com"
+           placeholder="email@…"
            required>
-    <button type="submit">Inscrever</button>
+    <button type="submit">→</button>
   </form>
 </div>
