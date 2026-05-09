@@ -23,4 +23,18 @@
     - /assets/img/art/ident4.jpg
     - /assets/img/art/ident5.jpg
     - /assets/img/art/ident6.jpg
-    
+
+- title: Movimento cósmico
+  cover: /assets/img/art/cosmiccover.jpg
+  thumb: /assets/img/art/cosmiccover.jpg
+  year: 2026
+  medium: Imagem digital
+  description: >
+    Dança cósmica - arte abstrata.
+  images:
+    - /assets/img/art/cosmic0.jpg
+    - /assets/img/art/cosmic1.jpg
+    - /assets/img/art/cosmic2.jpg
+    - /assets/img/art/cosmic3.jpg
+    - /assets/img/art/cosmic4.jpg
+    - /assets/img/art/cosmic5.jpg
