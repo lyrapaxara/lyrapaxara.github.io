@@ -29,7 +29,7 @@ If you're new to the question, three books that frame it well from very differen
 
 ## Branches
 
-Three subtopics where I gather more specific notes:
+There are three subtopics where I gather more specific notes:
 
 {% assign subs = site.topics | where_exp: "t", "t.parent == 'consciousness'" | where: "lang", "en" | sort: "order" %}
 
