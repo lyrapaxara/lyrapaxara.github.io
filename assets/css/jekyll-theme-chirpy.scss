@@ -529,3 +529,15 @@
   opacity: 0.5;
 }
 
+/* Hide heading anchor links on touch / small screens */
+@media (max-width: 768px) {
+  .content h1 .anchor,
+  .content h2 .anchor,
+  .content h3 .anchor,
+  .content h4 .anchor,
+  .content h5 .anchor,
+  .content h6 .anchor {
+    display: none !important;
+  }
+}
+
