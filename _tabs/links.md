@@ -1,6 +1,6 @@
 ---
 icon: fas fa-link
-order: 7
+order: 6
 description: Páginas e recursos recomendados.
 ---
 

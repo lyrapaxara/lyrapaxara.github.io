@@ -1,0 +1,35 @@
+{%- comment -%}
+  Reusable card grid for collection indexes.
+
+  Usage:
+    {% include card-grid.html items=site.topics %}
+    {% include card-grid.html items=site.works grouped_by="status" %}
+
+  Each item should have these front-matter fields:
+    title (required)
+    description or synopsis (one-liner, recommended)
+    cover (path to image, optional — falls back to placeholder)
+    badge (small label, e.g. "Published", "In progress", count of subtopics)
+{%- endcomment -%}
+
+{%- assign items = include.items -%}
+{%- assign grouped_by = include.grouped_by -%}
+
+{%- if grouped_by -%}
+  {%- assign groups = items | group_by: grouped_by -%}
+  {%- for group in groups -%}
+    <h2 class="card-group-title">{{ group.name }}</h2>
+    <div class="card-grid">
+      {%- for item in group.items -%}
+        {% include card-tile.html item=item %}
+      {%- endfor -%}
+    </div>
+  {%- endfor -%}
+{%- else -%}
+  <div class="card-grid">
+    {%- for item in items -%}
+      {% include card-tile.html item=item %}
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+

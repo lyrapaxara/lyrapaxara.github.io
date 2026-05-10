@@ -1,0 +1,20 @@
+{%- assign item = include.item -%}
+{%- assign cover = item.cover | default: '/assets/img/placeholder.svg' -%}
+
+<a class="card-tile" href="{{ item.url | relative_url }}">
+  <div class="card-tile-cover" style="background-image: url('{{ cover | relative_url }}');">
+    {%- if item.badge -%}<span class="card-tile-badge">{{ item.badge }}</span>{%- endif -%}
+  </div>
+  <div class="card-tile-body">
+    <h3 class="card-tile-title">{{ item.title }}</h3>
+    {%- if item.description -%}
+      <p class="card-tile-description">{{ item.description }}</p>
+    {%- elsif item.synopsis -%}
+      <p class="card-tile-description">{{ item.synopsis | truncate: 140 }}</p>
+    {%- endif -%}
+    {%- if item.meta -%}
+      <p class="card-tile-meta">{{ item.meta }}</p>
+    {%- endif -%}
+  </div>
+</a>
+

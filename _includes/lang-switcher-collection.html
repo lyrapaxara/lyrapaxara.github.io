@@ -1,0 +1,74 @@
+{%- comment -%}
+  Language switcher for items inside _topics/ or _works/.
+  Finds sibling files with the SAME parent folder AND the same `is_landing`
+  or same `parent` value, but a different language.
+
+  Two cases handled:
+    1) Topic landing pages: matched by sharing the topic slug in the URL.
+    2) Subtopic pages: matched by `parent` field + URL pattern.
+{%- endcomment -%}
+
+{%- assign current_url = page.url -%}
+{%- assign url_segments = current_url | split: '/' -%}
+
+{%- comment -%} For /topics/consciousness/ → segments = ['', 'topics', 'consciousness', ''] {%- endcomment -%}
+{%- comment -%} For /topics/consciousness/hard-problem/ → segments = ['', 'topics', 'consciousness', 'hard-problem', ''] {%- endcomment -%}
+
+{%- assign segments_count = url_segments.size -%}
+
+{%- comment -%} A landing page lives at depth 4 (/topics/SLUG/), a subtopic at depth 5 (/topics/SLUG/SUB/) {%- endcomment -%}
+
+{%- assign all_items = site.topics | concat: site.works -%}
+{%- assign siblings = "" | split: "" -%}
+
+{%- if page.is_landing -%}
+  {%- comment -%} Find other landings sharing the same topic slug {%- endcomment -%}
+  {%- assign topic_slug = url_segments[2] -%}
+  {%- for item in all_items -%}
+    {%- if item.is_landing -%}
+      {%- assign item_segments = item.url | split: '/' -%}
+      {%- if item_segments[2] == topic_slug -%}
+        {%- assign siblings = siblings | push: item -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- elsif page.parent -%}
+  {%- comment -%} Subtopic: find others with same parent + same url path prefix {%- endcomment -%}
+  {%- assign topic_slug = url_segments[2] -%}
+  {%- assign sub_slug = url_segments[3] -%}
+  {%- for item in all_items -%}
+    {%- if item.parent == page.parent -%}
+      {%- assign item_segments = item.url | split: '/' -%}
+      {%- if item_segments[2] == topic_slug and item_segments[3] == sub_slug -%}
+        {%- assign siblings = siblings | push: item -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if siblings.size > 1 -%}
+{%- assign lang_names = "pt:Português,fr:Français,en:English" | split: "," -%}
+
+<div class="lang-switcher">
+  <span class="lang-switcher-label">🌐</span>
+  {%- for sibling in siblings -%}
+    {%- assign sib_lang = sibling.lang | default: 'en' -%}
+    {%- assign label = sib_lang -%}
+    {%- for pair in lang_names -%}
+      {%- assign parts = pair | split: ":" -%}
+      {%- if parts[0] == sib_lang -%}{%- assign label = parts[1] -%}{%- endif -%}
+    {%- endfor -%}
+
+    {%- if sibling.url == page.url -%}
+      <span class="lang-switcher-current">{{ label }}</span>
+    {%- else -%}
+      <a class="lang-switcher-link"
+         href="{{ sibling.url | relative_url }}"
+         hreflang="{{ sib_lang }}"
+         lang="{{ sib_lang }}">{{ label }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+{%- endif -%}
+

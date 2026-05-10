@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="gllms" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1a26;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2dd4bf;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="dotsllms" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#gllms)"/>
+  <rect width="800" height="500" fill="url(#dotsllms)"/>
+  <g transform="translate(60, 60) scale(0.45)" fill="rgba(255,255,255,0.85)" opacity="0.92">
+    <path d="M70 110h252v60H70v-60z M70 200h180v60H70v-60z M270 200h52v60h-52v-60z M85 140h25v5H85v-5z M125 140h60v5h-60v-5z M200 140h40v5h-40v-5z M255 140h50v5h-50v-5z"/>
+  </g>
+  <text x="60" y="430" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-style="italic" fill="rgba(255,255,255,0.95)" font-weight="400">Large language models</text>
+  <text x="60" y="465" font-family="Georgia, serif" font-size="32" fill="rgba(255,255,255,0.55)" letter-spacing="3">lyrapaxara</text>
+</svg>
