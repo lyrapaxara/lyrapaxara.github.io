@@ -2,7 +2,7 @@
 # the default layout is 'page'
 title: About
 icon: fas fa-user
-order: 10
+order: 11
 ---
 
 <div class="lang-tabs" id="about-lang-tabs">

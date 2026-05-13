@@ -1,7 +1,7 @@
 ---
 title: Writings
 icon: fas fa-feather
-order: 3
+order: 4
 description: My own writings — published, in progress, and planned.
 ---
 
@@ -10,11 +10,12 @@ A catalogue of my own writings — works of fiction and personal essays, publish
 For texts about my work — recensions, interviews, news — see the post archive at the bottom of this page, or the dedicated catalogue inside each work.
 
 {% comment %}
-  Show one card per work — prefer EN, fall back to FR, then PT.
-  Group by status (published / in-progress / planned).
+  Only consider entries that have a `status` field set — this filters out
+  sub-pages (like reading pages) that share the same URL prefix.
+  Then show one card per work slug — prefer EN, fall back to FR, then PT.
 {% endcomment %}
 
-{% assign all_works = site.works %}
+{% assign all_works = site.works | where_exp: "w", "w.status" %}
 {% assign work_slugs = "" | split: "" %}
 {% assign primary_works = "" | split: "" %}
 
@@ -34,12 +35,18 @@ For texts about my work — recensions, interviews, news — see the post archiv
 {% endfor %}
 
 {% assign published = primary_works | where: "status", "published" | sort: "year" | reverse %}
+{% assign published_part = primary_works | where: "status", "published-part-1" | sort: "year" | reverse %}
 {% assign in_progress = primary_works | where: "status", "in-progress" | sort: "year" | reverse %}
 {% assign planned = primary_works | where: "status", "planned" | sort: "year" | reverse %}
 
 {% if published.size > 0 %}
 ## Published
 {% include card-grid.html items=published %}
+{% endif %}
+
+{% if published_part.size > 0 %}
+## First part published
+{% include card-grid.html items=published_part %}
 {% endif %}
 
 {% if in_progress.size > 0 %}
@@ -70,4 +77,3 @@ For texts about my work — recensions, interviews, news — see the post archiv
 {% else %}
 *No recent posts.*
 {% endif %}
-

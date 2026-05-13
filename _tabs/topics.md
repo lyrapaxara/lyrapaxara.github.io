@@ -1,7 +1,7 @@
 ---
 title: Topics
 icon: fas fa-compass
-order: 4
+order: 5
 description: Topics of interest — notes, readings, and references on consciousness, AI, NDEs, UFOs, and other questions.
 ---
 

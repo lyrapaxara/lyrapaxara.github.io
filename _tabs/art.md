@@ -1,6 +1,6 @@
 ---
 icon: fas fa-palette
-order: 5
+order: 6
 description: Galeria - fotos e arte gráfica.
 ---
 
