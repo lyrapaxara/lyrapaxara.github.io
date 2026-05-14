@@ -27,6 +27,8 @@ The phrase "disclosure era" — used loosely by journalists, researchers, and Co
 - **December 2022** — Congress establishes the All-Domain Anomaly Resolution Office (AARO), the most formal U.S. government effort to investigate UAP since the 1969 conclusion of Project Blue Book.
 - **July 2023** — Former intelligence officer David Grusch testifies under oath before the House Oversight Committee, alleging a decades-long classified program of crash retrievals and reverse engineering. His testimony does not constitute evidence in the technical sense, but its institutional significance is unambiguous.
 - **2024–present** — Continued congressional pressure, additional whistleblower testimonies, and ongoing AARO work.
+- **May 2026** — Released by the administration of Donald Trump beginning on May 8, 2026, of declassified US UAP files, and announced to continue as repeated, ongoing, expanding releases of UFO materials.
+
 
 ## What disclosure has and hasn't shown
 
@@ -40,6 +42,7 @@ The persistence of that residual category, decade after decade, across military 
 - **Ross Coulthart, *In Plain Sight*** (2021) — Australian investigative journalist on the same beat.
 - **Congressional testimonies** — particularly the David Grusch / Ryan Graves / David Fravor hearing, July 2023. (Public C-SPAN footage.)
 - **AARO's official reports** — useful for the institutional framing, even where one disagrees with their conclusions.
+- **US May 8, 2026 release of UFO / UAP declassified material** — [US Department of War](https://www.war.gov/News/Releases/Release/Article/4480582/department-of-war-releases-unidentified-anomalous-phenomena-files-in-historic-t/), [Wikipedia entry on US UAP files](https://en.wikipedia.org/wiki/United_States_UAP_files)
 
 ---
 
