@@ -6,7 +6,7 @@ status: published-part-1
 genre: conto
 year: 2026
 language_original: Portuguese
-description: Memória imaginária de uma peregrinação a Santiago de Compostela pelo caminho inglês, em Outubro de 2024. Primeira Parte.
+description: Memória imaginária de uma peregrinação a Santiago de Compostela pelo caminho inglês, em Outubro de 2024. Primeira Parte publicada; Segunda Parte em construção.
 cover: /assets/img/works/sendas-de-santiago-capa.jpg
 order: 3
 ---
@@ -27,21 +27,29 @@ A narrativa toma a forma de um suposto documento «encontrado pelo acaso do dest
 
 A obra acompanha uma embaixada de cinco peregrinos, vindos da Ilha da Madeira: três Marias (Inees, Hẽrriqeta, Graça), Dom Iosef ho Alberto, e Dom Joham ho Gabryel. Cada um traz os seus saberes — alquimia, medicina, matemáticas, música, filosofias do Oriente — e juntos cumprem, passo a passo, os trilhos físicos e espirituais do Caminho.
 
-## Estado da obra
+## Primeira Parte
 
-**Primeira Parte publicada.** A obra continua em construção; novas partes serão disponibilizadas aqui à medida que forem completadas.
+**Publicada em 2026.**
 
-## Ler ou descarregar
-
-> 📖 [**Ler em linha — Primeira Parte**](/works/sendas-de-santiago/ler/)
+> 📖 [**Ler em linha**](/works/sendas-de-santiago/ler/)
 >
 > 📕 [**Descarregar em PDF**](/assets/files/sendas-de-santiago-primeira-parte.pdf) — *30 páginas, ~960 Kb*
 >
 > 📘 [**Descarregar em EPUB**](/assets/files/sendas-de-santiago-primeira-parte.epub) — *para liseira / tablete*
 
+## Segunda Parte
+
+**Em construção — disponibilizada capítulo a capítulo.**
+
+> 📖 [**Parte II — índice de capítulos**](/works/sendas-de-santiago/parte-ii/)
+>
+> ↳ [Capítulo I — De Ferrol a Neda *(continuação)*](/works/sendas-de-santiago/parte-ii/cap-i/)
+
+A Segunda Parte será compilada para PDF e EPUB à medida que se acumular um conjunto coerente de capítulos.
+
 ## Para citar esta obra
 
-> João Gabriel Correia, *Sendas de Santiago — Primeira Parte*, Lyrapaxara, 2026.
+> João Gabriel Correia, *Sendas de Santiago*, Lyrapaxara, 2026.
 
 ---
 
