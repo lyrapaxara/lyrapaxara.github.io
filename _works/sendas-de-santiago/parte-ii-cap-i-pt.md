@@ -20,7 +20,7 @@ description: "Capítulo I da Segunda Parte de «Sendas de Santiago» — De Ferr
   <em>«Sendas de Santiago — Parte II, Capítulo I»</em> · João Gabriel Correia, 2026
 </div>
 
-## Capítulo I — De Ferrol haa Neda *(continuação)*
+## Capítulo I — De Ferrol ha Neda *(continuação)*
 
 ### De como aportarom hao Mosteyro de Saõ Martinho de Xuvia
 
