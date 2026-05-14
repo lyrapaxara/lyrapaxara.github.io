@@ -13,7 +13,7 @@ description: Romance de João Gabriel Correia. Edição da Livraria Orfeu, Bruxe
 
 ## Sobre o romance
 
-Ambientado na Madeira do final dos anos sessenta, *Flores de Jasmim* atravessa o microcosmos do seminário e o despertar de uma sociedade insular em vésperas de transformação. Personagens, lugares e memórias entrelaçam-se na fronteira ténue entre o vivido e o imaginado.
+Decorrendo na Madeira do final dos anos sessenta, *Flores de Jasmim* atravessa o microcosmos do seminário e o despertar de uma sociedade insular em vésperas de transformação. Personagens, lugares e memórias entrelaçam-se na fronteira ténue entre o vivido e o imaginado.
 
 ## Edição
 
