@@ -10,49 +10,20 @@
 
 /* append your custom style below */
 .home-hero {
-  position: relative;
-  height: 100vh;
-  margin: 0rem -1.5rem 2rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
-.home-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* dark overlay so text stays readable */
+.home-hero img.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.home-hero-inner {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: #fff;
-  padding: 0 1rem;
-}
-
-.home-hero-inner h1 {
-  font-size: 2.5rem;
-  margin: 0 0 0.5rem;
-  color: #fff;
-}
-
-.home-hero-inner p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .home-hero { height: 220px; }
-  .home-hero-inner h1 { font-size: 1.8rem; }
-}
 /* Writings list */
 .writings-list { list-style: none; padding: 0; }
 .writings-list li {
@@ -539,5 +510,89 @@
   .content h6 .anchor {
     display: none !important;
   }
+}
+
+/* Home page declarative text below hero */
+.home-intro {
+  max-width: 720px;
+  margin: 2.5rem auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.home-intro .lang-tabs {
+  margin: 0 0 2rem 0;
+}
+
+.home-intro .lang-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.home-intro .lang-section p:first-of-type::first-letter {
+  font-size: 2.4em;
+  font-weight: 600;
+  float: left;
+  line-height: 0.9;
+  margin: 0.1em 0.15em 0 0;
+  color: var(--link-color);
+}
+
+.home-intro .lang-section a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--link-color);
+}
+
+.home-intro .lang-section a:hover {
+  border-bottom-style: solid;
+}
+
+/* Reduce hero height slightly to make room for intro */
+.home-hero {
+  height: 55vh;
+  min-height: 380px;
+}
+
+@media (max-width: 600px) {
+  .home-intro {
+    padding: 0 1rem;
+  }
+  .home-intro .lang-section p {
+    text-align: left;
+    font-size: 1rem;
+  }
+  .home-intro .lang-section p:first-of-type::first-letter {
+    font-size: 2em;
+  }
+}
+
+/* Override Chirpy's placeholder shimmer on the hero image */
+.home-hero,
+.home-hero .hero-image {
+  animation: none !important;
+  background: none !important;
+}
+
+.home-hero .hero-image {
+  /* Ensure the image is displayed at its natural state */
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Block Chirpy's wrapper pseudo-elements if any */
+.home-hero::before,
+.home-hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+.preview-img.shimmer {
+  background: none !important;
+}
+.preview-img::before {
+  display: none !important;
 }
 

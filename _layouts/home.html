@@ -1,146 +1,70 @@
 ---
 layout: default
+refactor: true
 ---
-<section class="home-hero"
-  style="background-image: url('{{ '/assets/img/hero.jpg' | relative_url }}');">
-  <div class="home-hero-inner">
-    <h1>{{ site.title }}</h1>
-    {% if site.tagline %}<p>{{ site.tagline }}</p>{% endif %}
-  </div>
+
+
+<!-- Hero image, self-contained -->
+<section class="home-hero">
+  <img src="/assets/img/hero.jpg" 
+       alt="Lyrapaxara — lira, paz, altar" 
+       class="hero-image"
+       loading="eager"
+       decoding="sync">
 </section>
-{% include lang.html %}
 
-{% assign all_pinned = site.posts | where: 'pin', 'true' %}
-{% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+<!-- Trilingual declarative text -->
+<div class="home-intro">
 
-{% assign posts = '' | split: '' %}
+  <div class="lang-tabs" id="home-lang-tabs">
+    <button class="lang-tab active" data-lang="pt">Português</button>
+    <button class="lang-tab" data-lang="fr">Français</button>
+    <button class="lang-tab" data-lang="en">English</button>
+  </div>
 
-<!-- Get pinned posts on current page -->
+  <!-- Portuguese -->
+  <div class="lang-section" data-lang="pt">
+    <p>Bem-vindo. Sou <strong>João Gabriel Correia</strong>. Este é um site pessoal onde partilho trabalhos diversos relacionados com o meu percurso intelectual e profissional, principalmente no domínio da psicologia.</p>
 
-{% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign visible_end = visible_start | plus: paginator.per_page %}
+    <p>Aqui encontrarás textos, em três línguas, em torno de temas que considero centrais: a consciência (estado atual da investigação), o caminho dos místicos antigos e modernos, o lugar da arte, e a aparição contemporânea da inteligência artificial. Encontrarás também os meus romances — o publicado, o que está a ser escrito —, recensões sobre eles, e um espaço dedicado ao trabalho da minha filha Laura.</p>
 
-{% if all_pinned.size > visible_start %}
-  {% if all_pinned.size > visible_end %}
-    {% assign pinned_size = paginator.per_page %}
-  {% else %}
-    {% assign pinned_size = all_pinned.size | minus: visible_start %}
-  {% endif %}
+    <p>O nome do site reúne três palavras antigas — <em>Lyra</em>, <em>Pax</em>, <em>Ara</em> — para significar beleza, paz, e o lugar onde os dois se encontram. Para quem queira aprofundar, <a href="/posts/bem-vindo/">há um post inteiro sobre isso</a>. Boa leitura.</p>
+  </div>
 
-  {% for i in (visible_start..all_pinned.size) limit: pinned_size %}
-    {% assign posts = posts | push: all_pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_size = 0 %}
-{% endif %}
+  <!-- French -->
+  <div class="lang-section" data-lang="fr" hidden>
+    <p>Bienvenue. Je m'appelle <strong>João Gabriel Correia</strong>. Ceci est un site personnel où je partage divers travaux en rapport avec mon parcours intellectuel et professionnel, en particulier dans le domaine de la psychologie.</p>
 
-<!-- Get normal posts on current page -->
+    <p>Tu trouveras ici des textes de ma main, en trois langues, autour de ce qui continue de m'occuper : la conscience (état actuel de la recherche), le chemin des mystiques anciens et modernes, la place de l'art, et l'apparition contemporaine de l'intelligence artificielle. Tu y trouveras aussi mes romans — celui qui a été publié, celui qui s'écrit —, des recensions à leur sujet, et un espace dédié au travail de ma fille Laura.</p>
 
-{% assign normal_size = paginator.posts | size | minus: pinned_size %}
+    <p>Le nom du site rassemble trois mots anciens — <em>Lyra</em>, <em>Pax</em>, <em>Ara</em> — pour dire la beauté, la paix, et le lieu où les deux se rencontrent. Pour qui voudrait approfondir, <a href="/posts/bienvenue/">un texte entier y est consacré</a>. Bonne lecture.</p>
+  </div>
 
-{% if normal_size > 0 %}
-  {% if pinned_size > 0 %}
-    {% assign normal_start = 0 %}
-  {% else %}
-    {% assign normal_start = visible_start | minus: all_pinned.size %}
-  {% endif %}
+  <!-- English -->
+  <div class="lang-section" data-lang="en" hidden>
+    <p>Welcome. My name is <strong>João Gabriel Correia</strong>. This is a personal website where I share content related to my intellectual and professional experience, in particular in the field of psychology.</p>
 
-  {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
+    <p>Here you will find my own writing, in three languages, around the questions that still occupy me: consciousness (current state of research), the path of mystics ancient and modern, the place of art, and the contemporary emergence of artificial intelligence. You will also find my novels — one published, one being written —, reviews about them, and a space dedicated to my daughter Laura's work.</p>
 
-  {% for i in (normal_start..normal_end) %}
-    {% assign posts = posts | push: all_normal[i] %}
-  {% endfor %}
-{% endif %}
+    <p>The name of the site brings together three ancient words — <em>Lyra</em>, <em>Pax</em>, <em>Ara</em> — to mean beauty, peace, and the place where the two meet. For anyone who would like to go deeper, <a href="/posts/welcome/">there is an entire post about it</a>. Happy reading.</p>
+  </div>
 
-<div id="post-list" class="flex-grow-1 px-xl-1">
-  {% for post in posts %}
-    <article class="card-wrapper card">
-      <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
-        {% assign card_body_col = '12' %}
-
-        {% if post.image %}
-          {% assign src = post.image.path | default: post.image %}
-
-          {% if post.media_subpath %}
-            {% unless src contains '://' %}
-              {% assign src = post.media_subpath
-                | append: '/'
-                | append: src
-                | replace: '///', '/'
-                | replace: '//', '/'
-              %}
-            {% endunless %}
-          {% endif %}
-
-          {% if post.image.lqip %}
-            {% assign lqip = post.image.lqip %}
-
-            {% if post.media_subpath %}
-              {% unless lqip contains 'data:' %}
-                {% assign lqip = post.media_subpath
-                  | append: '/'
-                  | append: lqip
-                  | replace: '///', '/'
-                  | replace: '//', '/'
-                %}
-              {% endunless %}
-            {% endif %}
-
-            {% assign lqip_attr = 'lqip="' | append: lqip | append: '"' %}
-          {% endif %}
-
-          {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
-
-          <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" {{ lqip_attr }}>
-          </div>
-
-          {% assign card_body_col = '7' %}
-        {% endif %}
-
-        <div class="col-md-{{ card_body_col }}">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">{{ post.title }}</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>{% include post-summary.html %}</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                {% include datetime.html date=post.date lang=lang %}
-
-                <!-- categories -->
-                {% if post.categories.size > 0 %}
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    {% for category in post.categories %}
-                      {{ category }}
-                      {%- unless forloop.last -%},{%- endunless -%}
-                    {% endfor %}
-                  </span>
-                {% endif %}
-              </div>
-
-              {% if post.pin %}
-                <div class="pin ms-1">
-                  <i class="fas fa-thumbtack fa-fw"></i>
-                  <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
-                </div>
-              {% endif %}
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  {% endfor %}
 </div>
-<!-- #post-list -->
 
-{% if paginator.total_pages > 1 %}
-  {% include post-paginator.html %}
-{% endif %}
+<script>
+(function() {
+  var buttons = document.querySelectorAll('#home-lang-tabs .lang-tab');
+  var sections = document.querySelectorAll('#home-lang-tabs ~ .lang-section, .home-intro .lang-section');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = btn.dataset.lang;
+      buttons.forEach(function(b) {
+        b.classList.toggle('active', b.dataset.lang === target);
+      });
+      sections.forEach(function(s) {
+        s.hidden = (s.dataset.lang !== target);
+      });
+    });
+  });
+})();
+</script>
