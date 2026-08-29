@@ -15,7 +15,7 @@
   year: 2026
   medium: aguarela - pintura óleo
   description: >
-    Nove perspetivas de uma vida...
+    Momentos...
   images:
     - /assets/img/art/ident1.jpg
     - /assets/img/art/ident2.jpg
@@ -34,7 +34,7 @@
   year: 2026
   medium: aquarelle - dessin - peinture à l'huile
   description: >
-    Moments épars d'une vie...
+    Parcours de vie...
   images:
     - /assets/img/art/Laura00.jpg
     - /assets/img/art/Laura01.jpg
@@ -59,7 +59,7 @@
     - /assets/img/art/LauraV.jpg
     - /assets/img/art/Laura20.jpg
     
-- title: Movimento cósmico
+- title: Movimento
   cover: /assets/img/art/cosmiccover.jpg
   thumb: /assets/img/art/cosmiccover.jpg
   year: 2026
@@ -74,19 +74,19 @@
     - /assets/img/art/cosmic4.jpg
     - /assets/img/art/cosmic5.jpg
 
-- title: Vitraux - digital art
-  cover: /assets/img/art/vitrailcover.jpg
-  thumb: /assets/img/art/vitrailcover.jpg
-  year: 2026
-  medium: digital art
-  description: >
-    Regards et lumière.
-  images:
-    - /assets/img/art/vitrail0.jpg
-    - /assets/img/art/vitrail1.jpg
-    - /assets/img/art/vitrail2.jpg
-    - /assets/img/art/vitrail3.jpg
-    - /assets/img/art/vitrail4.jpg
-    - /assets/img/art/vitrail5.jpg
-    - /assets/img/art/vitrail6.jpg
+#- title: Vitraux - digital art
+#  cover: /assets/img/art/vitrailcover.jpg
+#  thumb: /assets/img/art/vitrailcover.jpg
+#  year: 2026
+#  medium: digital art
+#  description: >
+#    Regards et lumière.
+#  images:
+#    - /assets/img/art/vitrail0.jpg
+#    - /assets/img/art/vitrail1.jpg
+#    - /assets/img/art/vitrail2.jpg
+#    - /assets/img/art/vitrail3.jpg
+#    - /assets/img/art/vitrail4.jpg
+#    - /assets/img/art/vitrail5.jpg
+#    - /assets/img/art/vitrail6.jpg
 
